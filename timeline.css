@@ -1,0 +1,116 @@
+/* General Styles */
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMiIgaGVpZ2h0PSIyMDAiIHZpZXdCb3g9IjAgMCAyIDIwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggb3BhY2l0eT0iMC4yNSIgZD0iTTEgMEwwLjk5OTk5MSAyMDAiIHN0cm9rZT0iIzJENDA1QSIgc3Ryb2tlLWRhc2hhcnJheT0iNSA1Ii8+Cjwvc3ZnPgo=);
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+/* Timeline Item */
+.timeline-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-item .timeline-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.timeline-item-img {
+    flex: 1 1 auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.timelineheader {
+    flex: 1 1 auto;
+}
+
+.timeline-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+
+/* Large Devices (Up to 991px) */
+@media (max-width: 991px) {
+    .timeline:before {
+        left: 5%;
+    }
+
+    .timeline-item .timeline-icon {
+        left: -60%;
+        transform: translateY(-90%);
+        width: 100%;
+    }
+
+
+    .timeline-item h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Medium Devices (Up to 768px) */
+@media (max-width: 767px) {
+    .timeline:before {
+        left: 15%;
+    }
+
+    .timeline-item .timeline-icon {
+        left: -45%;
+        transform: translateY(-90%);
+        width: 100%;
+    }
+
+    .timeline-item h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Small Devices (Up to 576px) */
+@media (max-width: 575px) {
+    .timeline:before {
+        left: 10%;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline-item .timeline-icon {
+        left: -40%;
+        transform: translateY(-90%);
+        width: 100%;
+    }
+
+    .timeline-item h2 {
+        font-size: 1.4rem;
+    }
+
+    .timeline-item ul li {
+        font-size: 0.9rem;
+    }
+}
+
